@@ -64,6 +64,16 @@
   /* ---------- Home page: scroll sections that assemble as you arrive ---------- */
 
 
+  // Focal point for the crop (pos, and posM for the stacked phone layout), or a
+  // background color when the piece is shown whole (fit: "contain").
+  function imgStyle(item) {
+    const v = [];
+    if (item.pos) v.push(`--pos:${item.pos}`);
+    if (item.posM) v.push(`--pos-m:${item.posM}`);
+    if (item.bg) v.push(`--fit-bg:${item.bg}`);
+    return v.length ? ` style="${esc(v.join(";"))}"` : "";
+  }
+
   function renderShowcase() {
     // Where each piece starts before it settles: offset (px), tilt (deg), scale.
     // Every slot travels a different distance, so they move at different speeds (parallax).
@@ -85,7 +95,7 @@
           const item = typeof a === "string" ? { src: a } : a;
           const inner = item.text
             ? `<div class="tile"><p>${esc(item.text)}</p>${item.note ? `<span>${esc(item.note)}</span>` : ""}</div>`
-            : `<img src="${esc(item.src)}" alt="" loading="${i === 0 ? "eager" : "lazy"}"${item.pos ? ` style="object-position:${esc(item.pos)}"` : ""}>`;
+            : `<img src="${esc(item.src)}" alt="" loading="${i === 0 ? "eager" : "lazy"}"${item.fit === "contain" ? ' class="fit"' : ""}${imgStyle(item)}>`;
           return `<a class="sc-asset slot-${k}" href="${href}" tabindex="-1" aria-hidden="true">${inner}</a>`;
         }).join("");
         return `

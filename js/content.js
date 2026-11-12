@@ -51,15 +51,16 @@ window.CONTENT = {
       // Home page scroll section: background, text color, big background word, a one-line blurb,
       // and 4–5 pieces that fly in and settle into a grid: 1 = big hero, 2 = beside it,
       // 3 = tall (portrait images or quote cards fit best), 4–5 = along the bottom.
-      // A piece is an image path, { src, pos } to set the crop's focal point,
-      // or { text, note } for a quote card.
+      // A piece is an image path; { src, pos, posM } to set the crop's focal point
+      // (posM = phones); { src, fit: "contain", bg } to show it whole on a matching
+      // color (logos, prints, posters with text near the edges); or { text, note }.
       showcase: {
         bg: "#0b1626", ink: "#ffffff", word: "PlayGrounds",
         blurb: "Team 783's national NSAC campaign uniting the NFL's youth programs under one brand.",
         assets: [
-          "assets/img/nsac/hometown-huddle-event.jpg",
+          { src: "assets/img/nsac/hometown-huddle-event.jpg", pos: "left center" },
           "assets/img/nsac/playgrounds-logo.jpg",
-          { src: "assets/img/nsac/landing-page.jpg", pos: "center top" },
+          { src: "assets/img/nsac/landing-top.jpg", pos: "left top" },
           { src: "assets/img/nsac/billboard-play-anyway.jpg", pos: "left center" },
           "assets/img/nsac/playgrounds-ecosystem.jpg",
         ],
@@ -171,7 +172,7 @@ window.CONTENT = {
         blurb: "A compliment chain across campus, and the brand, interviews and site behind it.",
         assets: [
           "assets/img/ripple/video-poster.jpg",
-          "assets/img/ripple/logo-mark.jpg",
+          { src: "assets/img/ripple/logo-mark.jpg", fit: "contain", bg: "#ffffff" },
           { text: "“Your smile is very contagious!”", note: "Received by Meleah" },
           { src: "assets/img/ripple/banner.jpg", pos: "center 40%" },
         ],
@@ -209,9 +210,10 @@ window.CONTENT = {
         bg: "#0a0a0a", ink: "#ffffff", word: "Production",
         blurb: "Shooting and editing features for UNL partners, from campus police to Nebraska farms.",
         assets: [
-          "assets/img/video/unlpd-hit-and-run.jpg",
-          "assets/img/video/production-house-cover.jpg",
+          { src: "assets/img/video/unlpd-hit-and-run.jpg", pos: "left center" },
+          { src: "assets/img/video/production-house-cover.jpg", pos: "center 35%", posM: "left center" },
           "assets/img/video/orchesis-dance.jpg",
+          { src: "assets/img/video/on-farm-soil.jpg", pos: "center 40%" },
         ],
       },
       summary: "Video features produced with Production House.", // TODO describe what Production House is and what you did
@@ -242,10 +244,10 @@ window.CONTENT = {
         blurb: "A redesigned MASH Week hoodie for a VA philanthropy, plus summer rush.",
         assets: [
           { src: "assets/img/design/mash-hoodie-back.jpg", pos: "center 30%" },
-          "assets/img/design/mash-back-print.jpg",
+          { src: "assets/img/design/mash-back-print.jpg", fit: "contain", bg: "#141414" },
           "assets/img/design/mash-hoodie-front.jpg",
-          "assets/img/design/mash-character.jpg",
-          { src: "assets/img/design/dtd-summer-rush-2025.jpg", pos: "center top" },
+          { src: "assets/img/design/mash-character.jpg", fit: "contain", bg: "#141414" },
+          { src: "assets/img/design/dtd-summer-rush-2025.jpg", fit: "contain", bg: "#c0cdd3" },
         ],
       },
       summary: "Design work for my fraternity: a redesigned hoodie for MASH Week, our philanthropy week benefiting the VA, plus the Summer Rush 2025 recruitment flyer.",

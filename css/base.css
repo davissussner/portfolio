@@ -261,17 +261,22 @@ section + section { border-top: 1px solid var(--line); }
 /* Collage: a 6×6 grid beside the title. Pieces fill their cells (cropped to fit),
    so edges line up and gutters stay even. Flipped sections mirror the grid. */
 .sc-grid {
-  position: absolute; top: 7%; bottom: 7%; left: 40%; right: 4%;
+  /* Fixed 1.6:1 shape, scaled to fit the stage, so every slot keeps the same
+     proportions on any desktop screen and the crops stay predictable. */
+  position: absolute; top: 50%; right: 4%; translate: 0 -50%;
+  width: min(56%, calc((100vh - 4rem) * 0.84 * 1.6)); aspect-ratio: 1.6;
   display: grid; grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(6, 1fr);
   gap: clamp(.75rem, 1.4vw, 1.25rem);
 }
-.flip .sc-grid { left: 4%; right: 40%; direction: rtl; }
+.flip .sc-grid { right: auto; left: 4%; direction: rtl; }
 .sc-asset { position: relative; display: block; min-width: 0; min-height: 0; direction: ltr; text-decoration: none; will-change: transform, opacity; }
 .sc-asset img { display: block; }
+.sc-asset img { object-position: var(--pos, 50% 50%); }
 .sc-asset img, .sc-asset .tile {
   width: 100%; height: 100%; object-fit: cover;
   border-radius: var(--radius); box-shadow: 0 24px 60px rgb(0 0 0 / .28);
 }
+.sc-asset img.fit { object-fit: contain; background: var(--fit-bg, #fff); }
 /* hero, a support beside it, a tall piece, two along the bottom */
 .slot-0 { grid-column: 1 / 5; grid-row: 1 / 5; z-index: 2; }
 .slot-1 { grid-column: 5 / 7; grid-row: 1 / 3; z-index: 3; }
@@ -303,18 +308,20 @@ section + section { border-top: 1px solid var(--line); }
 .sc-text:hover .sc-cta span { transform: translateX(4px); }
 
 /* Phones: title on top, collage below */
-@media (max-width: 760px) {
+@media (max-width: 760px), (max-width: 1100px) and (orientation: portrait) {
   .sc { height: 180vh; }
   .sc-text { left: 6%; right: 6%; width: auto; top: 9%; transform: translate3d(0, var(--sc-shift, 0px), 0); }
   .flip .sc-text { right: 6%; left: 6%; }
   .sc-blurb { margin: .7rem 0 1rem; font-size: .95rem; }
-  .sc-grid, .flip .sc-grid { left: 6%; right: 6%; top: 46%; bottom: 5%; direction: ltr;
-    grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(4, 1fr); }
-  /* phones: one wide piece on top, two below (beats the desktop .n-3/.n-4 rules) */
-  .sc-grid .slot-0, .sc-grid.n-3 .slot-0 { grid-column: 1 / 5; grid-row: 1 / 3; }
-  .sc-grid .slot-1, .sc-grid.n-3 .slot-1 { grid-column: 1 / 3; grid-row: 3 / 5; }
-  .sc-grid .slot-2, .sc-grid.n-3 .slot-2 { grid-column: 3 / 5; grid-row: 3 / 5; }
+  /* stacked: a 16:9 piece on top, two squares below; fixed shape, centered under the title */
+  .sc-grid, .flip .sc-grid { top: auto; bottom: 5%; left: 50%; right: auto; translate: -50% 0; direction: ltr;
+    width: min(88%, calc(48vh / 1.07)); aspect-ratio: 1 / 1.07;
+    grid-template-columns: 1fr 1fr; grid-template-rows: 9fr 8fr; }
+  .sc-grid .slot-0, .sc-grid.n-3 .slot-0, .sc-grid.n-4 .slot-0 { grid-column: 1 / 3; grid-row: 1; }
+  .sc-grid .slot-1, .sc-grid.n-3 .slot-1, .sc-grid.n-4 .slot-1 { grid-column: 1; grid-row: 2; }
+  .sc-grid .slot-2, .sc-grid.n-3 .slot-2, .sc-grid.n-4 .slot-2 { grid-column: 2; grid-row: 2; }
   .sc-grid .slot-3, .sc-grid .slot-4 { display: none; }
+  .sc-asset img { object-position: var(--pos-m, var(--pos, 50% 50%)); }
   .tile { padding: .8rem; justify-content: safe center; }
   .tile p { font-size: .88rem; }
   .tile span { font-size: .62rem; margin-top: .4rem; }
