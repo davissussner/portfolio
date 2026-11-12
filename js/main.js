@@ -20,7 +20,7 @@
     document.querySelectorAll(".nav a").forEach((a) => a.addEventListener("click", () => $(".nav").classList.remove("open")));
   }
 
-  if ($("#work-grid")) renderHome();
+  if ($("#showcase")) renderHome();
   if ($("#project")) renderProject();
 
   function renderHome() {
@@ -28,28 +28,7 @@
     $("#hero-tagline").textContent = s.tagline;
     $("#hero-school").textContent = `${s.major} · ${s.school}`;
 
-    // Work grid + filters
-    const cats = ["All", ...new Set(C.projects.map((p) => p.category))];
-    $("#filters").innerHTML = cats
-      .map((c, i) => `<button class="chip" type="button" aria-pressed="${i === 0}" data-cat="${esc(c)}">${esc(c)}</button>`)
-      .join("");
-    $("#work-grid").innerHTML = C.projects
-      .map(
-        (p) => `
-      <a class="card" href="project.html?id=${encodeURIComponent(p.id)}" data-cat="${esc(p.category)}">
-        <div class="cover${p.coverFit === "contain" ? " contain" : ""}"><img src="${esc(p.cover)}" alt="" loading="lazy">${p.badge ? `<span class="badge">${esc(p.badge)}</span>` : ""}</div>
-        <h3>${esc(p.title)}</h3>
-        <p class="meta">${esc([p.category, p.client, p.year].filter(Boolean).join(" · "))}</p>
-      </a>`
-      )
-      .join("");
-    $("#filters").addEventListener("click", (e) => {
-      const btn = e.target.closest(".chip");
-      if (!btn) return;
-      document.querySelectorAll(".chip").forEach((b) => b.setAttribute("aria-pressed", b === btn));
-      const cat = btn.dataset.cat;
-      document.querySelectorAll(".card").forEach((card) => (card.hidden = cat !== "All" && card.dataset.cat !== cat));
-    });
+    renderShowcase();
 
     // About
     const a = C.about;
@@ -80,6 +59,97 @@
       s.linkedin && `<a href="${esc(s.linkedin)}" target="_blank" rel="noopener">LinkedIn</a>`,
       s.instagram && `<a href="${esc(s.instagram)}" target="_blank" rel="noopener">Instagram</a>`,
     ].filter(Boolean).join("");
+  }
+
+  /* ---------- Home page: scroll sections that assemble as you arrive ---------- */
+
+
+  function renderShowcase() {
+    // Where each piece starts before it settles: offset (px), tilt (deg), scale.
+    // Every slot travels a different distance, so they move at different speeds (parallax).
+    const FROM = [
+      { x: -140, y: 320, r: -6, s: 0.9 },
+      { x: 320, y: -260, r: 11, s: 0.8 },
+      { x: 380, y: 300, r: -13, s: 0.78 },
+      { x: -320, y: 380, r: 15, s: 0.75 },
+      { x: -220, y: -300, r: -10, s: 0.8 },
+    ];
+
+    const host = $("#showcase");
+    host.innerHTML = C.projects
+      .map((p, i) => {
+        const sc = p.showcase || { assets: [p.cover] };
+        const href = `project.html?id=${encodeURIComponent(p.id)}`;
+        const assets = sc.assets.slice(0, 5).map((a, k) => {
+          const inner = typeof a === "string"
+            ? `<img src="${esc(a)}" alt="" loading="${i === 0 ? "eager" : "lazy"}">`
+            : `<div class="tile"><p>${esc(a.text)}</p>${a.note ? `<span>${esc(a.note)}</span>` : ""}</div>`;
+          return `<a class="sc-asset slot-${k}" href="${href}" tabindex="-1" aria-hidden="true">${inner}</a>`;
+        }).join("");
+        return `
+        <div class="sc${i % 2 ? " flip" : ""}" style="--sc-bg:${esc(sc.bg || "var(--surface)")};--sc-ink:${esc(sc.ink || "var(--text)")}">
+          <div class="sc-stage">
+            <div class="sc-word" aria-hidden="true">${esc(sc.word || p.title)}</div>
+            <div class="sc-inner">
+              ${assets}
+              <a class="sc-text" href="${href}">
+                <p class="sc-meta">${esc([p.category, p.year].filter(Boolean).join(" · "))}</p>
+                <h3>${esc(p.title)}</h3>
+                <p class="sc-blurb">${esc(sc.blurb || p.summary)}</p>
+                <span class="sc-cta">View project <span aria-hidden="true">→</span></span>
+              </a>
+            </div>
+          </div>
+        </div>`;
+      })
+      .join("");
+
+    const sections = [...host.querySelectorAll(".sc")].map((el) => ({
+      el,
+      flip: el.classList.contains("flip") ? -1 : 1,
+      assets: [...el.querySelectorAll(".sc-asset")],
+      text: el.querySelector(".sc-text"),
+      word: el.querySelector(".sc-word"),
+    }));
+
+    const still = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const clamp = (v) => Math.min(1, Math.max(0, v));
+    const ease = (t) => 1 - Math.pow(1 - t, 3);
+
+    function update() {
+      const vh = window.innerHeight;
+      const narrow = window.innerWidth < 760;
+      const k = narrow ? 0.45 : 1; // smaller travel on phones
+      for (const s of sections) {
+        const r = s.el.getBoundingClientRect();
+        if (r.bottom < -vh || r.top > vh * 1.5) continue;
+        // enter: 0 when the section's top hits the bottom of the screen, 1 when it reaches the top (pinned)
+        const enter = still.matches ? 1 : clamp(1 - r.top / vh);
+        // hold: 0→1 while the section stays pinned
+        const hold = still.matches ? 0 : clamp(-r.top / Math.max(1, r.height - vh));
+
+        s.assets.forEach((el, i) => {
+          const f = FROM[i % FROM.length];
+          const t = ease(clamp((enter - i * 0.05) / (0.92 - i * 0.05)));
+          const u = 1 - t;
+          const drift = hold * (18 + i * 22); // gentle parallax while pinned
+          el.style.transform =
+            `translate3d(${f.x * u * s.flip * k}px, ${f.y * u * k - drift}px, 0) rotate(${f.r * u * s.flip}deg) scale(${1 - (1 - f.s) * u})`;
+          el.style.opacity = Math.min(1, 0.15 + t * 1.2);
+        });
+
+        const tt = ease(clamp((enter - 0.55) / 0.4));
+        s.text.style.opacity = tt;
+        s.text.style.setProperty("--sc-shift", `${(1 - tt) * 40}px`);
+        s.word.style.transform = `translate3d(${(s.flip * (12 - (enter + hold) * 24)).toFixed(2)}vw, -50%, 0)`;
+      }
+    }
+
+    // Update right on scroll (5 sections is cheap) so the motion never waits on a paused animation timer.
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    still.addEventListener?.("change", update);
+    update();
   }
 
   function renderProject() {

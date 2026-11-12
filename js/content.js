@@ -48,6 +48,20 @@ window.CONTENT = {
       category: "Campaigns",
       year: "2026",
       cover: "assets/img/nsac/playgrounds-ecosystem.jpg",
+      // Home page scroll section: background, text color, big background word, a one-line blurb,
+      // and up to 5 pieces that fly in and settle (the first is the largest). A piece can be an
+      // image path, or { text: "...", note: "..." } for a quote card.
+      showcase: {
+        bg: "#0b1626", ink: "#ffffff", word: "PlayGrounds",
+        blurb: "Team 783's national NSAC campaign uniting the NFL's youth programs under one brand.",
+        assets: [
+          "assets/img/nsac/billboard-play-anyway.jpg",
+          "assets/img/nsac/playgrounds-ecosystem.jpg",
+          "assets/img/nsac/hometown-huddle-event.jpg",
+          "assets/img/nsac/plans-book/page-01.jpg",
+          "assets/img/nsac/billboard-spanish.jpg",
+        ],
+      },
       summary: "Team 783's national campaign uniting the NFL's youth health and wellness programs under one brand, NFL PlayGrounds, to reach the casual-fan families who don't know those programs exist.",
       role: "Creative team member",
       team: "Team 783, University of Nebraska–Lincoln",
@@ -91,6 +105,16 @@ window.CONTENT = {
       category: "Video",
       year: "2026",
       cover: "assets/img/hdr/hdr-cover.svg",
+      showcase: {
+        bg: "#ecebe7", ink: "#1e1f1e", word: "HDR",
+        blurb: "Video for the HDR Foundation and the copy behind HDR's “Meet” employee spotlights.",
+        assets: [
+          "https://i.ytimg.com/vi/5NISDiHJ6L0/maxresdefault.jpg",
+          { text: "Meet Cesar Sandoval, M.S., a project accountant in Pennington, New Jersey. After more than 20 years in the U.S. Marine Corps…", note: "“Meet” spotlight copy" },
+          "assets/img/hdr/hdr-cover.svg",
+          { text: "Meet Wendy Nero, director of strategic initiatives in Fort Collins, Colorado.", note: "“Meet” spotlight copy" },
+        ],
+      },
       summary: "Video and copy for HDR, the employee-owned engineering and architecture firm, made as a corporate communications intern. I edit video for the HDR Foundation and HDR's social channels, and write HDR's “Meet” employee spotlight series on LinkedIn.",
       role: "Video editor and copywriter",
       stats: [],
@@ -139,6 +163,17 @@ window.CONTENT = {
       category: "Campaigns",
       year: "2025",
       cover: "assets/img/ripple/cover.jpg",
+      showcase: {
+        bg: "linear-gradient(180deg, #eaf6fd 0%, #9fd0ee 100%)", ink: "#0f2f47", word: "Ripple",
+        blurb: "A compliment chain across campus, and the brand, interviews and site behind it.",
+        assets: [
+          "assets/img/ripple/video-poster.jpg",
+          "assets/img/ripple/banner.jpg",
+          "assets/img/ripple/logo-mark.jpg",
+          { text: "“Your smile is very contagious!”", note: "Received by Meleah" },
+          { text: "“I love the cowboy boots!”", note: "Received by Jonas" },
+        ],
+      },
       summary: "A campus experience that spread positivity one compliment at a time. Each participant received a compliment written just for them, then wrote one for the person behind them in line, starting a chain we called a ripple.",
       role: "Graphic design, interviews and web design",
       team: "Pursuing Positivity: Lola Hofmann, Davis Sussner, John Tejral, Josh Dozler",
@@ -168,6 +203,16 @@ window.CONTENT = {
       category: "Video",
       year: "2025",
       cover: "assets/img/video/production-house-cover.jpg",
+      showcase: {
+        bg: "#0a0a0a", ink: "#ffffff", word: "Production",
+        blurb: "Shooting and editing features for UNL partners, from campus police to Nebraska farms.",
+        assets: [
+          "assets/img/video/unlpd-hit-and-run.jpg",
+          "assets/img/video/production-house-cover.jpg",
+          "assets/img/video/orchesis-dance.jpg",
+          "assets/img/video/on-farm-nitrogen.jpg",
+        ],
+      },
       summary: "Video features produced with Production House.", // TODO describe what Production House is and what you did
       role: "Videographer and editor",
       stats: [],
@@ -191,6 +236,17 @@ window.CONTENT = {
       category: "Design",
       year: "2025",
       cover: "assets/img/design/mash-cover.jpg",
+      showcase: {
+        bg: "#161515", ink: "#f2f0ec", word: "MASH Week",
+        blurb: "A redesigned MASH Week hoodie for a VA philanthropy, plus summer rush.",
+        assets: [
+          "assets/img/design/mash-hoodie-back.jpg",
+          "assets/img/design/mash-back-print.jpg",
+          "assets/img/design/dtd-summer-rush-2025.jpg",
+          "assets/img/design/mash-character.jpg",
+          "assets/img/design/mash-hoodie-front.jpg",
+        ],
+      },
       summary: "Design work for my fraternity: a redesigned hoodie for MASH Week, our philanthropy week benefiting the VA, plus the Summer Rush 2025 recruitment flyer.",
       role: "Designer",
       stats: [],
