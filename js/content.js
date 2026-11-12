@@ -9,7 +9,9 @@ window.CONTENT = {
     name: "Davis Sussner",
     major: "Advertising & Public Relations",
     school: "University of Nebraska–Lincoln",
-    tagline: "I make campaigns, design, photo and video that people actually stop for.",
+    // Top of the page: "I make ___" cycles through these words.
+    makes: ["campaigns", "video", "design", "copy"],
+    intro: "Creative director for UNL's NSAC team and corporate communications intern at HDR.",
     email: "davis@sussner.com",
     linkedin: "https://www.linkedin.com/in/davis-sussner-677b80257/",
     instagram: "",  // TODO paste a portfolio Instagram URL if you have one

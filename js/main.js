@@ -25,8 +25,11 @@
 
   function renderHome() {
     const s = C.site;
-    $("#hero-tagline").textContent = s.tagline;
     $("#hero-school").textContent = `${s.major} · ${s.school}`;
+    $("#hero-intro").textContent = s.intro;
+    $("#hero-headshot").src = C.about.headshot;
+    $("#hero-headshot").alt = `Portrait of ${s.name}`;
+    renderMakes(s.makes);
 
     renderShowcase();
 
@@ -59,6 +62,28 @@
       s.linkedin && `<a href="${esc(s.linkedin)}" target="_blank" rel="noopener">LinkedIn</a>`,
       s.instagram && `<a href="${esc(s.instagram)}" target="_blank" rel="noopener">Instagram</a>`,
     ].filter(Boolean).join("");
+  }
+
+  // "I make ___": the last word swaps every couple of seconds.
+  function renderMakes(words) {
+    const el = $("#hero-makes");
+    el.setAttribute("aria-label", `I make ${words.slice(0, -1).join(", ")} and ${words[words.length - 1]}.`);
+    el.innerHTML = `<span aria-hidden="true">I make <span class="makes-word"><span>${esc(words[0])}</span></span>.</span>`;
+    const still = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (words.length < 2) return;
+    let i = 0;
+    setInterval(() => {
+      i = (i + 1) % words.length;
+      const box = el.querySelector(".makes-word");
+      const next = document.createElement("span");
+      next.textContent = words[i];
+      if (still.matches) { box.replaceChildren(next); return; }
+      const old = box.firstElementChild;
+      next.className = "in";
+      old.className = "out";
+      box.appendChild(next);
+      setTimeout(() => old.remove(), 500);
+    }, 2200);
   }
 
   /* ---------- Home page: scroll sections that assemble as you arrive ---------- */

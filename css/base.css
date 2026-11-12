@@ -343,3 +343,24 @@ section + section { border-top: 1px solid var(--line); }
   .sc { height: auto; }
   .sc-stage { position: relative; min-height: 100vh; }
 }
+
+/* ---------- Hero: name, "I make ___", intro, headshot ---------- */
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: calc(var(--space) * 4); align-items: center; }
+.makes {
+  font-family: var(--font-display); font-weight: var(--heading-weight);
+  font-size: clamp(1.8rem, 4.2vw, 3.2rem); line-height: 1.1; margin: calc(var(--space) * 1.2) 0 0;
+}
+.makes-word { position: relative; display: inline-grid; vertical-align: bottom; overflow: hidden; font-style: italic; }
+.makes-word > span { grid-area: 1 / 1; white-space: nowrap; }
+.makes-word .in { animation: makes-in .5s cubic-bezier(.2, .7, .2, 1) both; }
+.makes-word .out { animation: makes-out .5s cubic-bezier(.2, .7, .2, 1) both; }
+@keyframes makes-in { from { transform: translateY(100%); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes makes-out { from { transform: none; opacity: 1; } to { transform: translateY(-100%); opacity: 0; } }
+.hero .lede { margin-top: calc(var(--space) * 1.2); }
+.hero-photo { display: block; width: clamp(200px, 24vw, 320px); }
+.hero-photo img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius); box-shadow: 0 24px 60px rgb(0 0 0 / .25); }
+@media (max-width: 760px) {
+  .hero-grid { grid-template-columns: 1fr; gap: calc(var(--space) * 2); }
+  .hero-photo { order: -1; width: 132px; }
+  .hero-photo img { aspect-ratio: 1; border-radius: 50%; object-position: center 25%; }
+}
