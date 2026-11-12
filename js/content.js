@@ -49,7 +49,7 @@ window.CONTENT = {
       year: "2026",
       cover: "assets/img/nsac/playgrounds-ecosystem.jpg",
       summary: "Team 783's national campaign uniting the NFL's youth health and wellness programs under one brand, NFL PlayGrounds, to reach the casual-fan families who don't know those programs exist.",
-      role: "", // TODO e.g. "Art director: billboards, logo system, landing page"
+      role: "Creative team member",
       team: "Team 783, University of Nebraska–Lincoln",
       badge: "Includes full plans book",
       // The plans book shows as a big feature near the top of the page.
