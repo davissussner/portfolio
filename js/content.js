@@ -133,6 +133,35 @@ window.CONTENT = {
     },
 
     {
+      id: "ripple-effect",
+      title: "The Ripple Effect",
+      client: "Pursuing Positivity · UNL",
+      category: "Campaigns",
+      year: "2025",
+      cover: "assets/img/ripple/cover.jpg",
+      summary: "A campus experience that spread positivity one compliment at a time. Each participant received a compliment written just for them, then wrote one for the person behind them in line, starting a chain we called a ripple.",
+      role: "Graphic design, interviews and web design",
+      team: "Pursuing Positivity: Lola Hofmann, Davis Sussner, John Tejral, Josh Dozler",
+      stats: [
+        { value: "100%", label: "of participants reported their emotional well-being went up or stayed the same" },
+        { value: "+2.27", label: "average increase in self-rated emotional state, before vs. after" },
+        { value: "15%", label: "couldn't remember the last time they'd received a compliment" },
+      ],
+      story: [
+        { heading: "The idea", text: "We wanted to reach as many people as possible with compliments. But what's more personal than a few people complimenting everyone? Participants complimenting each other. Every person in line passed a personalized compliment to the person behind them." },
+        { heading: "The experience", text: "We set up a table outside the Nebraska Union. Each participant was greeted with a compliment written for them, wrote one for the next person, then sat down for an on-camera interview about how it felt and about their relationship with compliments." },
+        { heading: "My part", text: "I designed The Ripple Effect identity (the ripple-drop logo and wave banner), conducted the participant interviews, and helped build the campaign website." },
+      ],
+      media: [
+        { type: "video", src: "assets/video/ripple-effect.mp4", poster: "assets/img/ripple/video-poster.jpg", caption: "The Ripple Effect · 0:30", wide: true },
+        { type: "image", src: "assets/img/ripple/banner.jpg", alt: "The Ripple Effect banner with the ripple-drop logo over layered blue waves", caption: "Campaign banner", wide: true },
+        { type: "image", src: "assets/img/ripple/logo-mark.jpg", alt: "Ripple-drop logo: a water drop made of concentric ripples", caption: "Logo mark" },
+        { type: "image", src: "assets/img/ripple/logo-wordmark.jpg", alt: "Ripple-drop logo with The Ripple Effect wordmark", caption: "Logo with wordmark" },
+      ],
+      links: [{ label: "Visit the campaign site", href: "https://pursuingpositivity.wixsite.com/the-ripple-effect" }],
+    },
+
+    {
       id: "production-house",
       title: "Production House",
       client: "Video production",
