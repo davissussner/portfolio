@@ -58,7 +58,7 @@ window.CONTENT = {
         bg: "#0b1626", ink: "#ffffff", word: "PlayGrounds",
         blurb: "Team 783's national NSAC campaign uniting the NFL's youth programs under one brand.",
         assets: [
-          { src: "assets/img/nsac/hometown-huddle-event.jpg", pos: "left center" },
+          "assets/img/video/nsac-manifesto.jpg",
           "assets/img/nsac/playgrounds-logo.jpg",
           { src: "assets/img/nsac/landing-top.jpg", pos: "left top" },
           { src: "assets/img/nsac/billboard-play-anyway.jpg", pos: "left center" },
@@ -96,7 +96,6 @@ window.CONTENT = {
         { type: "image", src: "assets/img/nsac/playgrounds-logo.jpg", alt: "NFL PlayGrounds logo: the NFL shield over PLAY in pink and GROUNDS in green", caption: "The NFL PlayGrounds logo" },
         { type: "image", src: "assets/img/nsac/playgrounds-ecosystem.jpg", alt: "NFL PlayGrounds logo at the center of the league's youth programs", caption: "One platform for every youth program" },
         { type: "image", src: "assets/img/nsac/billboard-spanish.jpg", alt: "Spanish-language billboard reading Siempre hay lugar para uno más", caption: "Spanish-language OOH for bicultural families", wide: true },
-        { type: "image", src: "assets/img/nsac/hometown-huddle-event.jpg", alt: "Illustrated mockup of the Hometown Huddle traveling festival with play, learn and give-back zones", caption: "Hometown Huddle traveling festival", wide: true },
         { type: "image", src: "assets/img/nsac/landing-page.jpg", alt: "NFL PlayGrounds landing page with program finder and bus tour map", caption: "Campaign landing page", wide: true },
       ],
       links: [],
