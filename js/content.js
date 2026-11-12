@@ -11,7 +11,7 @@ window.CONTENT = {
     school: "University of Nebraska–Lincoln",
     tagline: "I make campaigns, design, photo and video that people actually stop for.",
     email: "davis@sussner.com",
-    linkedin: "",   // TODO paste your LinkedIn URL, e.g. "https://www.linkedin.com/in/yourname"
+    linkedin: "https://www.linkedin.com/in/davis-sussner-677b80257/",
     instagram: "",  // TODO paste a portfolio Instagram URL if you have one
   },
 
