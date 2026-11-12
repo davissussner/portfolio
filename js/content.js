@@ -144,6 +144,7 @@ window.CONTENT = {
       stats: [],
       story: [],
       media: [
+        { type: "embed", url: "https://youtu.be/HEYdGVqnNCU", poster: "assets/img/video/unlpd-hit-and-run.jpg", caption: "UNLPD: Hit and Run · public safety explainer for the University of Nebraska–Lincoln Police Department", wide: true },
         { type: "embed", url: "https://youtu.be/rFnRGBVKP3M", poster: "assets/img/video/orchesis-dance.jpg", caption: "Orchesis Dance Group", wide: true },
         { type: "embed", url: "https://youtu.be/ApB388O3MeE", poster: "assets/img/video/on-farm-nitrogen.jpg", caption: "On-Farm Nitrogen Management", wide: true },
         { type: "video", hidden: true, src: "assets/video/social-sept-7.mp4", poster: "assets/img/video/social-sept-7.jpg", caption: "Social: Labor Day", vertical: true },
