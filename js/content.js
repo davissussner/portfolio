@@ -139,17 +139,17 @@ window.CONTENT = {
       category: "Video",
       year: "2025",
       cover: "assets/img/video/production-house-cover.jpg",
-      summary: "Short-form social, feature pieces and motion work produced with Production House.", // TODO describe what Production House is and what you did
+      summary: "Video features produced with Production House.", // TODO describe what Production House is and what you did
       role: "", // TODO e.g. "Videographer and editor"
       stats: [],
       story: [],
       media: [
         { type: "embed", url: "https://youtu.be/rFnRGBVKP3M", poster: "assets/img/video/orchesis-dance.jpg", caption: "Orchesis Dance Group", wide: true },
         { type: "embed", url: "https://youtu.be/ApB388O3MeE", poster: "assets/img/video/on-farm-nitrogen.jpg", caption: "On-Farm Nitrogen Management", wide: true },
-        { type: "video", src: "assets/video/social-sept-7.mp4", poster: "assets/img/video/social-sept-7.jpg", caption: "Social: Labor Day", vertical: true },
-        { type: "video", src: "assets/video/social-oct-7.mp4", poster: "assets/img/video/social-oct-7.jpg", caption: "Social: October", vertical: true },
-        { type: "video", src: "assets/video/social-nov-2.mp4", poster: "assets/img/video/social-nov-2.jpg", caption: "Social: November", vertical: true },
-        { type: "video", src: "assets/video/ending-reel.mp4", poster: "assets/img/video/ending-reel.jpg", caption: "Logo end-card animation" },
+        { type: "video", hidden: true, src: "assets/video/social-sept-7.mp4", poster: "assets/img/video/social-sept-7.jpg", caption: "Social: Labor Day", vertical: true },
+        { type: "video", hidden: true, src: "assets/video/social-oct-7.mp4", poster: "assets/img/video/social-oct-7.jpg", caption: "Social: October", vertical: true },
+        { type: "video", hidden: true, src: "assets/video/social-nov-2.mp4", poster: "assets/img/video/social-nov-2.jpg", caption: "Social: November", vertical: true },
+        { type: "video", hidden: true, src: "assets/video/ending-reel.mp4", poster: "assets/img/video/ending-reel.jpg", caption: "Logo end-card animation" },
       ],
       links: [],
     },

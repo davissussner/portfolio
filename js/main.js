@@ -174,6 +174,7 @@
   }
 
   function mediaHtml(m) {
+    if (m.hidden) return ""; // media marked hidden: true stays in content.js but isn't shown
     const cls = m.wide ? ' class="wide"' : "";
     const cap = m.caption ? `<figcaption>${esc(m.caption)}</figcaption>` : "";
     if (m.type === "image") {
