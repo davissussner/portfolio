@@ -140,7 +140,7 @@ window.CONTENT = {
       year: "2025",
       cover: "assets/img/video/production-house-cover.jpg",
       summary: "Video features produced with Production House.", // TODO describe what Production House is and what you did
-      role: "", // TODO e.g. "Videographer and editor"
+      role: "Videographer and editor",
       stats: [],
       story: [],
       media: [
