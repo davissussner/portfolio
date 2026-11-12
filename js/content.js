@@ -49,16 +49,18 @@ window.CONTENT = {
       year: "2026",
       cover: "assets/img/nsac/playgrounds-logo.jpg",
       // Home page scroll section: background, text color, big background word, a one-line blurb,
-      // and up to 5 pieces that fly in and settle (the first is the largest). A piece can be an
-      // image path, or { text: "...", note: "..." } for a quote card.
+      // and 4–5 pieces that fly in and settle into a grid: 1 = big hero, 2 = beside it,
+      // 3 = tall (portrait images or quote cards fit best), 4–5 = along the bottom.
+      // A piece is an image path, { src, pos } to set the crop's focal point,
+      // or { text, note } for a quote card.
       showcase: {
         bg: "#0b1626", ink: "#ffffff", word: "PlayGrounds",
         blurb: "Team 783's national NSAC campaign uniting the NFL's youth programs under one brand.",
         assets: [
-          "assets/img/nsac/billboard-play-anyway.jpg",
-          "assets/img/nsac/playgrounds-logo.jpg",
           "assets/img/nsac/hometown-huddle-event.jpg",
-          "assets/img/nsac/plans-book/page-01.jpg",
+          "assets/img/nsac/playgrounds-logo.jpg",
+          { src: "assets/img/nsac/landing-page.jpg", pos: "center top" },
+          { src: "assets/img/nsac/billboard-play-anyway.jpg", pos: "left center" },
           "assets/img/nsac/playgrounds-ecosystem.jpg",
         ],
       },
@@ -111,8 +113,8 @@ window.CONTENT = {
         blurb: "Video for the HDR Foundation and the copy behind HDR's “Meet” employee spotlights.",
         assets: [
           "https://i.ytimg.com/vi/5NISDiHJ6L0/maxresdefault.jpg",
-          { text: "Meet Cesar Sandoval, M.S., a project accountant in Pennington, New Jersey. After more than 20 years in the U.S. Marine Corps…", note: "“Meet” spotlight copy" },
           "assets/img/hdr/hdr-cover.svg",
+          { text: "Meet Cesar Sandoval, M.S., a project accountant in Pennington, New Jersey. After more than 20 years in the U.S. Marine Corps…", note: "“Meet” spotlight copy" },
           { text: "Meet Wendy Nero, director of strategic initiatives in Fort Collins, Colorado.", note: "“Meet” spotlight copy" },
         ],
       },
@@ -169,10 +171,9 @@ window.CONTENT = {
         blurb: "A compliment chain across campus, and the brand, interviews and site behind it.",
         assets: [
           "assets/img/ripple/video-poster.jpg",
-          "assets/img/ripple/banner.jpg",
           "assets/img/ripple/logo-mark.jpg",
           { text: "“Your smile is very contagious!”", note: "Received by Meleah" },
-          { text: "“I love the cowboy boots!”", note: "Received by Jonas" },
+          { src: "assets/img/ripple/banner.jpg", pos: "center 40%" },
         ],
       },
       summary: "A campus experience that spread positivity one compliment at a time. Each participant received a compliment written just for them, then wrote one for the person behind them in line, starting a chain we called a ripple.",
@@ -211,7 +212,6 @@ window.CONTENT = {
           "assets/img/video/unlpd-hit-and-run.jpg",
           "assets/img/video/production-house-cover.jpg",
           "assets/img/video/orchesis-dance.jpg",
-          "assets/img/video/on-farm-nitrogen.jpg",
         ],
       },
       summary: "Video features produced with Production House.", // TODO describe what Production House is and what you did
@@ -241,11 +241,11 @@ window.CONTENT = {
         bg: "#161515", ink: "#f2f0ec", word: "MASH Week",
         blurb: "A redesigned MASH Week hoodie for a VA philanthropy, plus summer rush.",
         assets: [
-          "assets/img/design/mash-hoodie-back.jpg",
+          { src: "assets/img/design/mash-hoodie-back.jpg", pos: "center 30%" },
           "assets/img/design/mash-back-print.jpg",
-          "assets/img/design/dtd-summer-rush-2025.jpg",
-          "assets/img/design/mash-character.jpg",
           "assets/img/design/mash-hoodie-front.jpg",
+          "assets/img/design/mash-character.jpg",
+          { src: "assets/img/design/dtd-summer-rush-2025.jpg", pos: "center top" },
         ],
       },
       summary: "Design work for my fraternity: a redesigned hoodie for MASH Week, our philanthropy week benefiting the VA, plus the Summer Rush 2025 recruitment flyer.",

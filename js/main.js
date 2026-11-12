@@ -80,10 +80,12 @@
       .map((p, i) => {
         const sc = p.showcase || { assets: [p.cover] };
         const href = `project.html?id=${encodeURIComponent(p.id)}`;
-        const assets = sc.assets.slice(0, 5).map((a, k) => {
-          const inner = typeof a === "string"
-            ? `<img src="${esc(a)}" alt="" loading="${i === 0 ? "eager" : "lazy"}">`
-            : `<div class="tile"><p>${esc(a.text)}</p>${a.note ? `<span>${esc(a.note)}</span>` : ""}</div>`;
+        const list = sc.assets.slice(0, 5);
+        const assets = list.map((a, k) => {
+          const item = typeof a === "string" ? { src: a } : a;
+          const inner = item.text
+            ? `<div class="tile"><p>${esc(item.text)}</p>${item.note ? `<span>${esc(item.note)}</span>` : ""}</div>`
+            : `<img src="${esc(item.src)}" alt="" loading="${i === 0 ? "eager" : "lazy"}"${item.pos ? ` style="object-position:${esc(item.pos)}"` : ""}>`;
           return `<a class="sc-asset slot-${k}" href="${href}" tabindex="-1" aria-hidden="true">${inner}</a>`;
         }).join("");
         return `
@@ -91,7 +93,7 @@
           <div class="sc-stage">
             <div class="sc-word" aria-hidden="true">${esc(sc.word || p.title)}</div>
             <div class="sc-inner">
-              ${assets}
+              <div class="sc-grid n-${list.length}">${assets}</div>
               <a class="sc-text" href="${href}">
                 <p class="sc-meta">${esc([p.category, p.year].filter(Boolean).join(" · "))}</p>
                 <h3>${esc(p.title)}</h3>
