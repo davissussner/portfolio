@@ -20,7 +20,7 @@ window.CONTENT = {
     // TODO These paragraphs are a starting draft written from your resume. Make them sound like you.
     bio: [
       "I'm an Advertising and Public Relations major at the University of Nebraska–Lincoln, graduating in May 2027. I grew up in Wayzata, Minnesota, and a Scholastic National Art Award in high school is what pointed me toward a creative career.",
-      "My work spans campaign strategy, graphic design, photography and video. This year I'm creative director of UNL's team for the AAF National Student Advertising Competition, after serving on the creative team for Team 783's 2026 campaign for NFL PlayGrounds.",
+      "My work spans campaign strategy, graphic design, photography and video. Since May I've been creative director of UNL's team for the AAF National Student Advertising Competition, after spending the 2025–26 season on the creative team for Team 783's national campaign for NFL PlayGrounds.",
       "Right now I'm a corporate communications intern at HDR in Omaha, editing and producing video for the HDR Foundation, cutting podcasts and writing for social, web and internal channels. Before that I interned in marketing at Sussner Design in Minneapolis.",
     ],
     facts: [
@@ -240,10 +240,15 @@ window.CONTENT = {
     ],
     experience: [
       {
-        title: "Creative Director", org: "AAF National Student Advertising Competition · University of Nebraska–Lincoln", dates: "2026–Present",
+        title: "Creative Director", org: "AAF National Student Advertising Competition · University of Nebraska–Lincoln", dates: "May 2026–Present",
         points: [
-          "Lead creative direction for UNL's NSAC team for the 2027 competition",
-          "Previously a creative team member on Team 783 (NSAC 2026), building a national campaign for NFL PlayGrounds",
+          "Selected to lead the creative team for UNL's next NSAC campaign",
+        ],
+      },
+      {
+        title: "Creative Team Member", org: "AAF NSAC Team 783 · University of Nebraska–Lincoln", dates: "Oct 2025–May 2026",
+        points: [
+          "Worked on the creative team for the full NFL PlayGrounds campaign, from concepting through TV spots, out-of-home, the event activation and the final plans book",
         ],
       },
       {
