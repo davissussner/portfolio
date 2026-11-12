@@ -71,9 +71,9 @@ window.CONTENT = {
         { heading: "The goals", text: "A 25% lift in aided program awareness among casual fans, a 10-point shift toward seeing the NFL as community-first, and 50,000+ direct program registrations." },
       ],
       media: [
-        { type: "embed", url: "", poster: "assets/img/video/nsac-manifesto.jpg", caption: "Campaign manifesto", wide: true },
-        { type: "embed", url: "", poster: "assets/img/video/nsac-tv-spot-1.jpg", caption: "Hero TV spot 1" },
-        { type: "embed", url: "", poster: "assets/img/video/nsac-tv-spot-2.jpg", caption: "Hero TV spot 2" },
+        { type: "embed", url: "https://youtu.be/YcBdccAUACY", poster: "assets/img/video/nsac-manifesto.jpg", caption: "Campaign manifesto", wide: true },
+        { type: "embed", url: "https://youtu.be/X9S2Nsi7EwY", poster: "assets/img/video/nsac-tv-spot-1.jpg", caption: "Hero TV spot 1" },
+        { type: "embed", url: "https://youtu.be/bGIDyAtLnYk", poster: "assets/img/video/nsac-tv-spot-2.jpg", caption: "Hero TV spot 2" },
         { type: "image", src: "assets/img/nsac/billboard-play-anyway.jpg", alt: "Billboard reading Play Anyway with kids playing football in the rain", caption: "Out of home: “Play Anyway.”", wide: true },
         { type: "image", src: "assets/img/nsac/billboard-play-as-you-are.jpg", alt: "Billboard reading Play As You Are with a football passed between hands", caption: "Out of home: “Play As You Are.”", wide: true },
         { type: "image", src: "assets/img/nsac/billboard-spanish.jpg", alt: "Spanish-language billboard reading Siempre hay lugar para uno más", caption: "Spanish-language OOH for bicultural families" },
@@ -144,8 +144,8 @@ window.CONTENT = {
       stats: [],
       story: [],
       media: [
-        { type: "embed", url: "", poster: "assets/img/video/orchesis-dance.jpg", caption: "Orchesis Dance Group", wide: true },
-        { type: "embed", url: "", poster: "assets/img/video/on-farm-nitrogen.jpg", caption: "On-Farm Nitrogen Management", wide: true },
+        { type: "embed", url: "https://youtu.be/rFnRGBVKP3M", poster: "assets/img/video/orchesis-dance.jpg", caption: "Orchesis Dance Group", wide: true },
+        { type: "embed", url: "https://youtu.be/ApB388O3MeE", poster: "assets/img/video/on-farm-nitrogen.jpg", caption: "On-Farm Nitrogen Management", wide: true },
         { type: "video", src: "assets/video/social-sept-7.mp4", poster: "assets/img/video/social-sept-7.jpg", caption: "Social: Labor Day", vertical: true },
         { type: "video", src: "assets/video/social-oct-7.mp4", poster: "assets/img/video/social-oct-7.jpg", caption: "Social: October", vertical: true },
         { type: "video", src: "assets/video/social-nov-2.mp4", poster: "assets/img/video/social-nov-2.jpg", caption: "Social: November", vertical: true },
