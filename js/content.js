@@ -47,7 +47,7 @@ window.CONTENT = {
       client: "NFL · AAF National Student Advertising Competition",
       category: "Campaigns",
       year: "2026",
-      cover: "assets/img/nsac/playgrounds-ecosystem.jpg",
+      cover: "assets/img/nsac/playgrounds-logo.jpg",
       // Home page scroll section: background, text color, big background word, a one-line blurb,
       // and up to 5 pieces that fly in and settle (the first is the largest). A piece can be an
       // image path, or { text: "...", note: "..." } for a quote card.
@@ -56,10 +56,10 @@ window.CONTENT = {
         blurb: "Team 783's national NSAC campaign uniting the NFL's youth programs under one brand.",
         assets: [
           "assets/img/nsac/billboard-play-anyway.jpg",
-          "assets/img/nsac/playgrounds-ecosystem.jpg",
+          "assets/img/nsac/playgrounds-logo.jpg",
           "assets/img/nsac/hometown-huddle-event.jpg",
           "assets/img/nsac/plans-book/page-01.jpg",
-          "assets/img/nsac/billboard-spanish.jpg",
+          "assets/img/nsac/playgrounds-ecosystem.jpg",
         ],
       },
       summary: "Team 783's national campaign uniting the NFL's youth health and wellness programs under one brand, NFL PlayGrounds, to reach the casual-fan families who don't know those programs exist.",
@@ -90,8 +90,9 @@ window.CONTENT = {
         { type: "embed", url: "https://youtu.be/bGIDyAtLnYk", poster: "assets/img/video/nsac-tv-spot-2.jpg", caption: "Hero TV spot 2" },
         { type: "image", src: "assets/img/nsac/billboard-play-anyway.jpg", alt: "Billboard reading Play Anyway with kids playing football in the rain", caption: "Out of home: “Play Anyway.”", wide: true },
         { type: "image", src: "assets/img/nsac/billboard-play-as-you-are.jpg", alt: "Billboard reading Play As You Are with a football passed between hands", caption: "Out of home: “Play As You Are.”", wide: true },
-        { type: "image", src: "assets/img/nsac/billboard-spanish.jpg", alt: "Spanish-language billboard reading Siempre hay lugar para uno más", caption: "Spanish-language OOH for bicultural families" },
+        { type: "image", src: "assets/img/nsac/playgrounds-logo.jpg", alt: "NFL PlayGrounds logo: the NFL shield over PLAY in pink and GROUNDS in green", caption: "The NFL PlayGrounds logo" },
         { type: "image", src: "assets/img/nsac/playgrounds-ecosystem.jpg", alt: "NFL PlayGrounds logo at the center of the league's youth programs", caption: "One platform for every youth program" },
+        { type: "image", src: "assets/img/nsac/billboard-spanish.jpg", alt: "Spanish-language billboard reading Siempre hay lugar para uno más", caption: "Spanish-language OOH for bicultural families", wide: true },
         { type: "image", src: "assets/img/nsac/hometown-huddle-event.jpg", alt: "Illustrated mockup of the Hometown Huddle traveling festival with play, learn and give-back zones", caption: "Hometown Huddle traveling festival", wide: true },
         { type: "image", src: "assets/img/nsac/landing-page.jpg", alt: "NFL PlayGrounds landing page with program finder and bus tour map", caption: "Campaign landing page", wide: true },
       ],
