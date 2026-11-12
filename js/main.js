@@ -99,7 +99,7 @@
           return `<a class="sc-asset slot-${k}" href="${href}" tabindex="-1" aria-hidden="true">${inner}</a>`;
         }).join("");
         return `
-        <div class="sc${i % 2 ? " flip" : ""}" style="--sc-bg:${esc(sc.bg || "var(--surface)")};--sc-ink:${esc(sc.ink || "var(--text)")}">
+        <div class="sc${i % 2 ? " flip" : ""}" style="--sc-bg:${esc(sc.bg || "var(--surface)")};--sc-bg-solid:${esc(sc.bgSolid || sc.bg || "var(--surface)")};--sc-ink:${esc(sc.ink || "var(--text)")}">
           <div class="sc-stage">
             <div class="sc-word" aria-hidden="true">${esc(sc.word || p.title)}</div>
             <div class="sc-inner">

@@ -20,14 +20,14 @@ window.CONTENT = {
     // TODO These paragraphs are a starting draft written from your resume. Make them sound like you.
     bio: [
       "I'm an Advertising and Public Relations major at the University of Nebraska–Lincoln, graduating in May 2027. I grew up in Wayzata, Minnesota, and a Scholastic National Art Award in high school is what pointed me toward a creative career.",
-      "My work spans campaign strategy, graphic design, photography and video. Since May I've been creative director of UNL's team for the AAF National Student Advertising Competition, after spending the 2025–26 season on the creative team for Team 783's national campaign for NFL PlayGrounds.",
+      "My work spans video, graphic design, photography and campaign strategy. Since May I've been creative director of UNL's team for the AAF National Student Advertising Competition, after spending the 2025–26 season on the creative team for Team 783's national campaign for NFL PlayGrounds.",
       "Right now I'm a corporate communications intern at HDR in Omaha, editing and producing video for the HDR Foundation, cutting podcasts and writing for social, web and internal channels. Before that I interned in marketing at Sussner Design in Minneapolis.",
     ],
     facts: [
       { label: "Studying", value: "ADPR, UNL '27" },
       { label: "Based in", value: "Lincoln, NE" },
       { label: "Hometown", value: "Wayzata, MN" },
-      { label: "Tools", value: "Adobe Illustrator, Photoshop, Premiere" }, // TODO confirm or edit
+      { label: "Tools", value: "Adobe Premiere, Illustrator, Photoshop" },
     ],
   },
 
@@ -167,7 +167,7 @@ window.CONTENT = {
       year: "2025",
       cover: "assets/img/ripple/cover.jpg",
       showcase: {
-        bg: "linear-gradient(180deg, #eaf6fd 0%, #9fd0ee 100%)", ink: "#0f2f47", word: "Ripple",
+        bg: "linear-gradient(180deg, #eaf6fd 0%, #9fd0ee 100%)", bgSolid: "#d6ecf8", ink: "#0f2f47", word: "Ripple",
         blurb: "A compliment chain across campus, and the brand, interviews and site behind it.",
         assets: [
           "assets/img/ripple/video-poster.jpg",

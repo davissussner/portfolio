@@ -303,9 +303,19 @@ section + section { border-top: 1px solid var(--line); }
 .sc-meta { font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; opacity: .7; margin: 0 0 1rem; }
 .sc-text h3 { font-size: clamp(2.2rem, 4.4vw, 4rem); line-height: 1; }
 .sc-blurb { margin: 1.1rem 0 1.6rem; opacity: .8; max-width: 34ch; font-size: 1.05rem; }
-.sc-cta { display: inline-flex; gap: .5em; font-weight: 500; border-bottom: 1px solid currentColor; padding-bottom: .2em; }
+/* Solid button in the section's colors, reversed: ink box, background-colored text */
+.sc-cta {
+  display: inline-flex; align-items: center; gap: .6em;
+  padding: .85em 1.35em; border-radius: var(--radius);
+  background: var(--sc-ink); color: var(--sc-bg-solid);
+  font-weight: 600; font-size: .95rem; letter-spacing: .01em;
+  transition: transform .2s, box-shadow .2s;
+}
 .sc-cta span { transition: transform .2s; }
+.sc-text:hover .sc-cta { transform: translateY(-2px); box-shadow: 0 10px 24px rgb(0 0 0 / .25); }
 .sc-text:hover .sc-cta span { transform: translateX(4px); }
+.sc-text:focus-visible { outline: none; }
+.sc-text:focus-visible .sc-cta { outline: 3px solid var(--sc-ink); outline-offset: 3px; }
 
 /* Phones: title on top, collage below */
 @media (max-width: 760px), (max-width: 1100px) and (orientation: portrait) {
