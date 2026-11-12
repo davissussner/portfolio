@@ -1,0 +1,44 @@
+/* Clean minimal theme.
+   Every look-and-feel choice for the site lives here. Change a value to
+   restyle the whole site; copy this file to make a new theme. */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap");
+
+:root {
+  /* Colors */
+  --bg: #fbfaf8;
+  --surface: #f3f1ed;
+  --text: #1a1a1a;
+  --muted: #6b6b6b;
+  --line: #e4e0da;
+  --accent: #1a1a1a;
+  --accent-ink: #ffffff;   /* text on top of --accent */
+  --chip-bg: #efece7;
+
+  /* Type */
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --heading-weight: 400;
+  --heading-case: none;     /* none | uppercase */
+  --heading-tracking: -0.01em;
+  --hero-size: clamp(3.2rem, 10vw, 7.5rem);
+
+  /* Shape & spacing */
+  --radius: 4px;
+  --space: 1rem;
+  --max-width: 1160px;
+  --card-shadow: none;
+  --cover-ratio: 4 / 3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --surface: #1c1c1c;
+    --text: #f2f0ec;
+    --muted: #a3a09a;
+    --line: #2c2c2c;
+    --accent: #f2f0ec;
+    --accent-ink: #121212;
+    --chip-bg: #242424;
+  }
+}

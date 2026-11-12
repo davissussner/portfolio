@@ -1,0 +1,37 @@
+/* Bold editorial theme: big type, strong color, agency feel. */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;800;900&display=swap");
+
+:root {
+  --bg: #f4f1ea;
+  --surface: #ebe6db;
+  --text: #111111;
+  --muted: #555555;
+  --line: #111111;
+  --accent: #ff4f1f;
+  --accent-ink: #111111;
+  --chip-bg: #e4dfd2;
+
+  --font-display: "Archivo", system-ui, sans-serif;
+  --font-body: "Archivo", system-ui, sans-serif;
+  --heading-weight: 900;
+  --heading-case: uppercase;
+  --heading-tracking: -0.03em;
+  --hero-size: clamp(3.2rem, 11vw, 9rem);
+
+  --radius: 0px;
+  --space: 1rem;
+  --max-width: 1240px;
+  --card-shadow: 6px 6px 0 var(--text);
+  --cover-ratio: 1 / 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111111;
+    --surface: #1c1c1c;
+    --text: #f4f1ea;
+    --muted: #b0aca3;
+    --line: #f4f1ea;
+    --chip-bg: #262626;
+  }
+}
