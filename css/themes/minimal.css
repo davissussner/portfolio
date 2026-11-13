@@ -1,7 +1,7 @@
 /* Clean minimal theme.
    Every look-and-feel choice for the site lives here. Change a value to
    restyle the whole site; copy this file to make a new theme. */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap");
 
 :root {
   /* Colors */
@@ -15,12 +15,12 @@
   --chip-bg: #efece7;
 
   /* Type */
-  --font-display: "Instrument Serif", Georgia, serif;
+  --font-display: "Inter Tight", "Inter", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
-  --heading-weight: 400;
+  --heading-weight: 600;
   --heading-case: none;     /* none | uppercase */
-  --heading-tracking: -0.01em;
-  --hero-size: clamp(3.2rem, 10vw, 7.5rem);
+  --heading-tracking: -0.03em;
+  --hero-size: clamp(3rem, 9vw, 6.75rem);
 
   /* Shape & spacing */
   --radius: 4px;
