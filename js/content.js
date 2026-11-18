@@ -22,7 +22,7 @@ window.CONTENT = {
     // TODO These paragraphs are a starting draft written from your resume. Make them sound like you.
     bio: [
       "I'm an Advertising and Public Relations major at the University of Nebraska–Lincoln, graduating in May 2027. I grew up in Wayzata, Minnesota, and a Scholastic National Art Award in high school is what pointed me toward a creative career.",
-      "My work spans video, graphic design, photography and campaign strategy. Since May I've been creative director of UNL's team for the AAF National Student Advertising Competition, after spending the 2025–26 season on the creative team for Team 783's national campaign for NFL PlayGrounds.",
+      "My work spans video, graphic design, photography and campaign strategy. Since May I've been creative director of UNL's team for the AAF National Student Advertising Competition, after spending the 2025–26 season on the creative team for Team 783's national campaign for NFL Playgrounds.",
       "Right now I'm a corporate communications intern at HDR in Omaha, editing and producing video for the HDR Foundation, cutting podcasts and writing for social, web and internal channels. Before that I interned in marketing at Sussner Design in Minneapolis.",
     ],
     facts: [
@@ -45,7 +45,7 @@ window.CONTENT = {
   projects: [
     {
       id: "nsac-nfl-playgrounds",
-      title: "NFL PlayGrounds: Always Room for One More",
+      title: "NFL Playgrounds: Always Room for One More",
       client: "NFL · AAF National Student Advertising Competition",
       category: "Campaigns",
       year: "2026",
@@ -57,7 +57,7 @@ window.CONTENT = {
       // (posM = phones); { src, fit: "contain", bg } to show it whole on a matching
       // color (logos, prints, posters with text near the edges); or { text, note }.
       showcase: {
-        bg: "#0b1626", ink: "#ffffff", word: "PlayGrounds",
+        bg: "#0b1626", ink: "#ffffff", word: "Playgrounds",
         blurb: "Team 783's national NSAC campaign uniting the NFL's youth programs under one brand.",
         assets: [
           "assets/img/video/nsac-manifesto.jpg",
@@ -67,7 +67,7 @@ window.CONTENT = {
           "assets/img/nsac/playgrounds-ecosystem.jpg",
         ],
       },
-      summary: "Team 783's national campaign uniting the NFL's youth health and wellness programs under one brand, NFL PlayGrounds, to reach the casual-fan families who don't know those programs exist.",
+      summary: "Team 783's national campaign uniting the NFL's youth health and wellness programs under one brand, NFL Playgrounds, to reach the casual-fan families who don't know those programs exist.",
       role: "Creative team member",
       team: "Team 783, University of Nebraska–Lincoln",
       badge: "Includes full plans book",
@@ -86,7 +86,7 @@ window.CONTENT = {
       story: [
         { heading: "The problem", text: "The NFL runs some of the most comprehensive youth wellness programs in American sports, but families credit them to the school, the coach or the community center. Our research showed this isn't a trust problem. It's a visibility problem." },
         { heading: "The insight", text: "Kids have lost about eight hours of free play a week since the 1970s, and the families who need playgrounds most are the least likely to have them. Across every community we spoke with, belonging mattered more than winning." },
-        { heading: "The idea", text: "NFL PlayGrounds brings PLAY 60, FLAG, Character Playbook and the league's other youth programs together in one ecosystem with one promise: there's always room for one more. It comes to life through two hero TV spots, a traveling Hometown Huddle festival, a UGC campaign and in-venue activation across 890+ youth sports venues." },
+        { heading: "The idea", text: "NFL Playgrounds brings PLAY 60, FLAG, Character Playbook and the league's other youth programs together in one ecosystem with one promise: there's always room for one more. It comes to life through two hero TV spots, a traveling Hometown Huddle festival, a UGC campaign and in-venue activation across 890+ youth sports venues." },
         { heading: "The goals", text: "A 25% lift in aided program awareness among casual fans, a 10-point shift toward seeing the NFL as community-first, and 50,000+ direct program registrations." },
       ],
       media: [
@@ -95,10 +95,10 @@ window.CONTENT = {
         { type: "embed", url: "https://youtu.be/bGIDyAtLnYk", poster: "assets/img/video/nsac-tv-spot-2.jpg", caption: "Hero TV spot 2" },
         { type: "image", src: "assets/img/nsac/billboard-play-anyway.jpg", alt: "Billboard reading Play Anyway with kids playing football in the rain", caption: "Out of home: “Play Anyway.”", wide: true },
         { type: "image", src: "assets/img/nsac/billboard-play-as-you-are.jpg", alt: "Billboard reading Play As You Are with a football passed between hands", caption: "Out of home: “Play As You Are.”", wide: true },
-        { type: "image", src: "assets/img/nsac/playgrounds-logo.jpg", alt: "NFL PlayGrounds logo: the NFL shield over PLAY in pink and GROUNDS in green", caption: "The NFL PlayGrounds logo" },
-        { type: "image", src: "assets/img/nsac/playgrounds-ecosystem.jpg", alt: "NFL PlayGrounds logo at the center of the league's youth programs", caption: "One platform for every youth program" },
+        { type: "image", src: "assets/img/nsac/playgrounds-logo.jpg", alt: "NFL Playgrounds logo: the NFL shield over PLAY in pink and GROUNDS in green", caption: "The NFL Playgrounds logo" },
+        { type: "image", src: "assets/img/nsac/playgrounds-ecosystem.jpg", alt: "NFL Playgrounds logo at the center of the league's youth programs", caption: "One platform for every youth program" },
         { type: "image", src: "assets/img/nsac/billboard-spanish.jpg", alt: "Spanish-language billboard reading Siempre hay lugar para uno más", caption: "Spanish-language OOH for bicultural families", wide: true },
-        { type: "image", src: "assets/img/nsac/landing-page.jpg", alt: "NFL PlayGrounds landing page with program finder and bus tour map", caption: "Campaign landing page", wide: true },
+        { type: "image", src: "assets/img/nsac/landing-page.jpg", alt: "NFL Playgrounds landing page with program finder and bus tour map", caption: "Campaign landing page", wide: true },
       ],
       links: [],
     },
@@ -337,7 +337,7 @@ window.CONTENT = {
       {
         title: "Creative Team Member", org: "AAF NSAC Team 783 · University of Nebraska–Lincoln", dates: "Oct 2025–May 2026",
         points: [
-          "Worked on the creative team for the full NFL PlayGrounds campaign, from concepting through TV spots, out-of-home, the event activation and the final plans book",
+          "Worked on the creative team for the full NFL Playgrounds campaign, from concepting through TV spots, out-of-home, the event activation and the final plans book",
         ],
       },
       {
