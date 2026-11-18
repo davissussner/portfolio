@@ -82,7 +82,9 @@
       next.className = "in";
       old.className = "out";
       box.appendChild(next);
-      setTimeout(() => old.remove(), 500);
+      // Clean up after the slide. Clearing the class also guarantees the word ends up
+      // visible even if the browser never runs the animation (e.g. a background tab).
+      setTimeout(() => { old.remove(); next.className = ""; }, 550);
     }, 2200);
   }
 
